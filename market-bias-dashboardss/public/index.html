@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Market Bias Dashboard — Live</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div id="liveDot" class="dot"></div>
+    <h1>Macro & Market Bias — GOLD (XAUUSD) & NASDAQ‑100</h1>
+  </div>
+  <div class="right">
+    <div class="spin"></div>
+    <span class="badge" id="lastUpdated">—</span>
+  </div>
+</header>
+
+<main class="grid">
+  <!-- LEFT: GOLD -->
+  <section class="panel">
+    <div class="title"><h2>GOLD — Macro & Sentiment</h2><span id="goldUpdated" class="badge">—</span></div>
+    <div class="cards">
+      <div class="card">
+        <h3>COT — Gold Futures</h3>
+        <div class="kv" id="cotGold"></div>
+        <div class="meter"><i id="cotGoldMeter"></i></div>
+        <div class="src" id="cotGoldSrc">—</div>
+      </div>
+      <div class="card">
+        <h3>Options Flow — GLD</h3>
+        <div class="kv" id="optGold"></div>
+        <div class="meter"><i id="optGoldMeter"></i></div>
+        <div class="src" id="optGoldSrc">—</div>
+      </div>
+      <div class="card" style="grid-column:1/-1">
+        <h3>Macro Overlay — GOLD</h3>
+        <div class="kv" id="macroGoldKV"></div>
+        <div class="meter"><i id="macroGoldMeter"></i></div>
+        <div class="src" id="macroGoldSrc">—</div>
+      </div>
+      <div class="card" style="grid-column:1/-1">
+        <h3>Final GOLD Bias</h3>
+        <div class="row">
+          <div class="value" id="goldScoreLbl">—</div>
+          <div class="meter" style="min-width:50%"><i id="goldScoreMeter"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHT: NASDAQ-100 -->
+  <section class="panel">
+    <div class="title"><h2>NASDAQ‑100 — Risk Sentiment</h2><span id="ndxUpdated" class="badge">—</span></div>
+    <div class="cards">
+      <div class="card">
+        <h3>COT — Nasdaq 100</h3>
+        <div class="kv" id="cotNdx"></div>
+        <div class="meter"><i id="cotNdxMeter"></i></div>
+        <div class="src" id="cotNdxSrc">—</div>
+      </div>
+      <div class="card">
+        <h3>Options Flow — QQQ</h3>
+        <div class="kv" id="optNdx"></div>
+        <div class="meter"><i id="optNdxMeter"></i></div>
+        <div class="src" id="optNdxSrc">—</div>
+      </div>
+      <div class="card">
+        <h3>Breadth — QQQ</h3>
+        <div class="kv" id="breadthKV"></div>
+        <div class="meter"><i id="breadthMeter"></i></div>
+        <div class="src" id="breadthSrc">—</div>
+      </div>
+      <div class="card" style="grid-column:1/-1">
+        <h3>Macro Overlay — NASDAQ‑100</h3>
+        <div class="kv" id="macroNdxKV"></div>
+        <div class="meter"><i id="macroNdxMeter"></i></div>
+        <div class="src" id="macroNdxSrc">—</div>
+      </div>
+      <div class="card" style="grid-column:1/-1">
+        <h3>Final NASDAQ‑100 Bias</h3>
+        <div class="row">
+          <div class="value" id="ndxScoreLbl">—</div>
+          <div class="meter" style="min-width:50%"><i id="ndxScoreMeter"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM: Macro & News -->
+  <section class="panel" style="grid-column:1/-1">
+    <div class="title"><h2>Macro Calendar & Geopolitical/News</h2><span id="calUpdated" class="badge">—</span></div>
+    <div class="two">
+      <div class="card">
+        <h3>Economic Calendar</h3>
+        <div class="list" id="calendarList"></div>
+        <div class="src" id="calSrc">—</div>
+      </div>
+      <div class="card">
+        <h3>News Flow</h3>
+        <div class="list" id="newsList"></div>
+        <div class="src" id="newsSrc">—</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>15s auto‑refresh • All APIs via one backend • Keys stay server‑side 🔨🤖🔧</footer>
+<script src="script.js"></script>
+</body>
+</html>
